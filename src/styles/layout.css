@@ -1,0 +1,41 @@
+/* ============================================================
+   LAYOUT COMPARTIDO ENTRE FEATURES
+   Estructura reutilizada por varias secciones de negocio
+   (encabezados de seccion, botones genericos, contenedores).
+   ============================================================ */
+.section{ padding:56px 0; }
+@media (min-width:760px){ .section{ padding:88px 0; } }
+
+.section.alt{ background:var(--bg-alt); }
+
+.section-head{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 40px;
+}
+@media (min-width:760px){ .section-head{ margin-bottom:50px; } }
+
+.section-head h2{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.7rem, 3.6vw, 2.3rem);
+  color:var(--navy-deep);
+  margin:0 0 12px;
+}
+.section-head p{
+  color:var(--text-muted);
+  font-size:1.02rem;
+  margin:0;
+}
+
+/* Botones genericos reutilizados por el CTA final y otras features */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-weight:700; font-size:.95rem;
+  padding:15px 28px; border-radius:999px; border:none; cursor:pointer;
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+}
+.btn-primary{ background:var(--orange); color:#fff; }
+.btn-primary:hover{ background:var(--orange-dark); transform:translateY(-2px); box-shadow:0 10px 24px rgba(241,101,44,.35); }
+.btn-outline{ background:transparent; color:var(--text-light); border:1.5px solid rgba(255,255,255,.3); }
+.btn-outline:hover{ background:rgba(255,255,255,.08); transform:translateY(-2px); }

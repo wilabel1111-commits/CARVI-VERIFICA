@@ -1,0 +1,169 @@
+/* ============================================================
+   FEATURE: Verificacion de placa (Hero)
+   Mobile-first: el layout parte apilado en columna y centrado;
+   los breakpoints solo agregan comportamiento para pantallas
+   mas anchas.
+   ============================================================ */
+.hero{
+  background:linear-gradient(165deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+  padding:48px 0 0;
+}
+@media (min-width:640px){ .hero{ padding-top:64px; } }
+
+.hero-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding-bottom:44px;
+}
+@media (min-width:640px){ .hero-inner{ padding-bottom:56px; } }
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:.82rem;
+  font-weight:600;
+  color:var(--orange);
+  background:rgba(241,101,44,.12);
+  border:1px solid rgba(241,101,44,.35);
+  padding:7px 16px;
+  border-radius:999px;
+  margin-bottom:26px;
+}
+.badge .icon{ width:15px; height:15px; }
+
+h1.hero-title{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(2.1rem, 5.2vw, 3.4rem);
+  line-height:1.12;
+  color:var(--text-light);
+  margin:0 0 20px;
+  max-width:780px;
+}
+h1.hero-title .accent{ color:var(--orange); }
+
+.hero-sub{
+  font-size:clamp(1rem, 1.6vw, 1.15rem);
+  color:var(--text-light-muted);
+  max-width:560px;
+  line-height:1.6;
+  margin:0 0 34px;
+}
+@media (min-width:640px){ .hero-sub{ margin-bottom:38px; } }
+
+/* Tarjeta de captura de placa: pieza central de la conversion */
+.plate-card{
+  background:var(--paper);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-md);
+  padding:22px;
+  width:100%;
+  max-width:480px;
+  text-align:left;
+}
+@media (min-width:480px){ .plate-card{ padding:28px; } }
+
+.plate-label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+  font-size:.92rem;
+  color:var(--text-dark);
+  margin-bottom:14px;
+}
+.plate-label .icon{ width:18px; height:18px; color:var(--navy-mid); }
+
+/* En pantallas muy angostas el input y el boton se apilan para
+   evitar que el boton quede demasiado angosto (mejor UX tactil). */
+.plate-row{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+@media (min-width:400px){ .plate-row{ flex-direction:row; } }
+
+#placaInput{
+  flex:1;
+  font-family:var(--font-mono);
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  background:var(--navy-deep);
+  color:var(--text-light);
+  border:2px solid var(--navy-deep);
+  border-radius:var(--radius-sm);
+  padding:14px 16px;
+  width:100%;
+  transition:border-color .2s var(--ease);
+}
+#placaInput::placeholder{ color:var(--text-light-muted); text-transform:none; letter-spacing:0; }
+#placaInput.shake{ border-color:var(--orange); animation:shake .35s var(--ease); }
+@keyframes shake{
+  0%,100%{ transform:translateX(0); }
+  25%{ transform:translateX(-4px); }
+  75%{ transform:translateX(4px); }
+}
+
+.plate-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:var(--orange);
+  color:#fff;
+  font-weight:700;
+  font-size:.95rem;
+  border:none;
+  border-radius:var(--radius-sm);
+  min-height:48px; /* objetivo tactil accesible en movil */
+  padding:0 22px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background .2s var(--ease), transform .2s var(--ease);
+}
+.plate-btn:hover{ background:var(--orange-dark); transform:translateY(-1px); }
+
+.plate-note{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:.8rem;
+  color:var(--text-muted);
+  margin-top:14px;
+}
+.plate-note .icon{ width:14px; height:14px; flex-shrink:0; }
+
+.hero-free-line{
+  margin-top:22px;
+  font-size:.92rem;
+  color:var(--text-light-muted);
+}
+.hero-free-line a{
+  color:var(--orange);
+  font-weight:700;
+  border-bottom:1px solid rgba(241,101,44,.4);
+  transition:color .2s var(--ease), border-color .2s var(--ease);
+}
+.hero-free-line a:hover{ color:#ff8a57; border-color:#ff8a57; }
+
+.hero-strip{
+  border-top:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.12);
+}
+.hero-strip-inner{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px 38px;
+  padding:18px 20px;
+  font-size:.85rem;
+  color:var(--text-light-muted);
+  font-weight:500;
+}
+.hero-strip-inner span{ display:inline-flex; align-items:center; gap:7px; }
+.hero-strip-inner .icon{ width:16px; height:16px; color:var(--orange); }

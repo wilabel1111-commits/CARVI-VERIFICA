@@ -1,0 +1,34 @@
+/* ============================================================
+   FEATURE: Llamado a la accion final
+   Mobile-first: botones apilados y centrados, se vuelven fila
+   cuando hay espacio suficiente (flex-wrap se encarga solo).
+   ============================================================ */
+.final-cta{
+  background:linear-gradient(165deg, var(--navy-deep), var(--navy-mid));
+  color:var(--text-light);
+  padding:60px 0;
+  text-align:center;
+}
+@media (min-width:760px){ .final-cta{ padding:74px 0; } }
+
+.final-cta h2{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.7rem, 3.6vw, 2.3rem);
+  margin:0 0 14px;
+}
+.final-cta p{
+  color:var(--text-light-muted);
+  max-width:520px;
+  margin:0 auto 32px;
+  font-size:1rem;
+}
+.final-actions{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-bottom:26px; }
+.final-chips{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.chip-pill{
+  display:inline-flex; align-items:center; gap:7px;
+  font-size:.82rem; color:var(--text-light-muted);
+  border:1px solid rgba(255,255,255,.18);
+  padding:8px 16px; border-radius:999px;
+}
+.chip-pill .icon{ width:14px; height:14px; }

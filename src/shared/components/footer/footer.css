@@ -1,0 +1,33 @@
+/* ============================================================
+   COMPONENTE: Pie de pagina
+   Mobile-first: columnas apiladas, se ponen en fila en tablet+.
+   ============================================================ */
+footer{ background:var(--navy-deep); color:var(--text-light-muted); padding:40px 0 24px; }
+@media (min-width:760px){ footer{ padding:48px 0 26px; } }
+
+.footer-grid{
+  display:flex; flex-direction:column; gap:28px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-bottom:28px; margin-bottom:20px;
+}
+@media (min-width:760px){ .footer-grid{ flex-direction:row; justify-content:space-between; align-items:flex-start; } }
+
+.footer-brand{ font-family:var(--font-display); font-weight:800; color:var(--text-light); font-size:1.1rem; margin-bottom:8px; }
+.footer-brand-desc{ font-size:.88rem; max-width:300px; line-height:1.6; }
+
+.footer-links{ display:flex; gap:36px; flex-wrap:wrap; }
+.footer-col h4{ font-size:.76rem; letter-spacing:.1em; color:var(--text-light); margin:0 0 12px; font-family:var(--font-mono); }
+.footer-col a{ display:block; font-size:.88rem; padding:5px 0; transition:color .2s var(--ease); }
+.footer-col a:hover{ color:var(--text-light); }
+
+.footer-whatsapp-btn{
+  all:unset;
+  display:block;
+  font-size:.88rem;
+  padding:5px 0;
+  cursor:pointer;
+  transition:color .2s var(--ease);
+}
+.footer-whatsapp-btn:hover{ color:var(--text-light); }
+
+.footer-bottom{ font-size:.8rem; display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; }

@@ -1,0 +1,95 @@
+/* ============================================================
+   FEATURE: Directorio gratuito (alternativa sin costo)
+   Mobile-first: la tarjeta informativa y la promocional se
+   apilan; en tablet/desktop van lado a lado.
+   ============================================================ */
+.free-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+@media (min-width:860px){ .free-grid{ grid-template-columns:1fr 1fr; gap:24px; } }
+
+.info-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px;
+}
+@media (min-width:480px){ .info-card{ padding:32px; } }
+
+.info-card .label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--text-muted);
+  margin-bottom:18px;
+}
+#liveClock{ color:var(--orange); font-weight:700; }
+
+.stat-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+.stat{
+  background:var(--bg-alt);
+  border-radius:var(--radius-sm);
+  padding:16px;
+}
+.stat .num{ font-family:var(--font-display); font-weight:800; font-size:1.5rem; color:var(--navy-deep); }
+.stat .lbl{ font-size:.78rem; color:var(--text-muted); margin-top:2px; }
+
+.schedule-row{
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding:11px 0; border-top:1px solid var(--line); font-size:.92rem;
+}
+.schedule-row:first-of-type{ border-top:none; }
+.schedule-row .day{ color:var(--text-muted); }
+.schedule-row .hours{ font-weight:600; color:var(--text-dark); }
+
+.free-card{
+  background:linear-gradient(155deg, var(--navy-deep), var(--navy-mid));
+  border-radius:var(--radius-lg);
+  padding:28px;
+  color:var(--text-light);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+@media (min-width:480px){ .free-card{ padding:34px; } }
+
+.free-card .free-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--orange);
+  background:rgba(241,101,44,.14);
+  border:1px solid rgba(241,101,44,.35);
+  padding:5px 13px;
+  border-radius:999px;
+  margin-bottom:16px;
+  width:fit-content;
+}
+.free-card h3{ font-family:var(--font-display); font-size:1.4rem; margin:0 0 12px; }
+.free-card p{ font-size:.92rem; color:var(--text-light-muted); line-height:1.6; margin:0 0 24px; }
+
+.free-card .btn-free{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  align-self:flex-start;
+  background:var(--orange);
+  color:#fff;
+  font-weight:700;
+  font-size:.93rem;
+  min-height:48px;
+  padding:0 24px;
+  border-radius:999px;
+  transition:background .2s var(--ease), transform .2s var(--ease);
+}
+.free-card .btn-free{ display:inline-flex; align-items:center; }
+.free-card .btn-free:hover{ background:var(--orange-dark); transform:translateY(-2px); }
+.free-card .btn-free .arrow{ transition:transform .2s var(--ease); }
+.free-card .btn-free:hover .arrow{ transform:translateX(3px); }

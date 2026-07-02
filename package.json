@@ -1,0 +1,9 @@
+{
+  "name": "autocheck-vehicular",
+  "version": "1.0.0",
+  "description": "Landing page de verificacion vehicular Autocheck (Peru)",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 5500"
+  }
+}

@@ -1,0 +1,80 @@
+/* ============================================================
+   COMPONENTE: Barra de navegacion superior
+   ============================================================ */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:200;
+  background:rgba(18,32,63,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:68px;
+  gap:18px;
+}
+.brand{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:1.2rem;
+  color:var(--text-light);
+  letter-spacing:.01em;
+}
+.brand .dot{ color:var(--orange); }
+
+.nav-links{
+  display:none;
+  align-items:center;
+  gap:30px;
+  font-size:.93rem;
+  font-weight:500;
+  color:var(--text-light-muted);
+}
+.nav-links a{ transition:color .2s var(--ease); }
+.nav-links a:hover{ color:var(--text-light); }
+.nav-links .nav-free{ color:var(--orange); font-weight:600; }
+.nav-links .nav-free:hover{ color:#ff7f4d; }
+
+.nav-cta{
+  background:var(--orange);
+  color:var(--navy-deep) !important;
+  padding:10px 20px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.9rem;
+  white-space:nowrap;
+}
+.nav-cta:hover{ background:var(--orange-dark); }
+
+.burger{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+}
+.burger span{
+  width:22px; height:2px; background:var(--text-light);
+  transition:transform .25s var(--ease), opacity .25s var(--ease);
+}
+.burger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+.mobile-menu{ display:none; flex-direction:column; background:var(--navy-deep); border-bottom:1px solid rgba(255,255,255,.08); }
+.mobile-menu.open{ display:flex; }
+.mobile-menu a{ padding:15px 20px; color:var(--text-light); font-weight:500; border-top:1px solid rgba(255,255,255,.06); }
+.mobile-menu a.nav-free{ color:var(--orange); font-weight:700; }
+
+/* Breakpoint: desktop/tablet ancha -> se muestra el menu horizontal
+   y se oculta el menu hamburguesa. Mobile-first: por defecto oculto. */
+@media (min-width:900px){
+  .nav-links{ display:flex; }
+  .burger{ display:none; }
+  .mobile-menu{ display:none !important; }
+}

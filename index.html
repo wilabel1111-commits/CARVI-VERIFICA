@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carvi | Verifica tu vehículo antes de comprarlo</title>
+<meta name="description" content="Autocheck — informe completo de papeletas, SOAT, gravámenes y más sobre cualquier vehículo en el Perú. También puedes verificar gratis con nuestro directorio oficial.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tokens y base primero: definen variables que usan los demas -->
+<link rel="stylesheet" href="src/styles/tokens.css">
+<link rel="stylesheet" href="src/styles/base.css">
+<link rel="stylesheet" href="src/styles/layout.css">
+
+<!-- Componentes compartidos -->
+<link rel="stylesheet" href="src/shared/components/topbar/topbar.css">
+<link rel="stylesheet" href="src/shared/components/footer/footer.css">
+<link rel="stylesheet" href="src/shared/components/whatsapp-fab/whatsapp-fab.css">
+<link rel="stylesheet" href="src/shared/components/whatsapp-advisor-modal/whatsapp-advisor-modal.css">
+
+<!-- Features de negocio, en el orden en que aparecen en la pagina -->
+<link rel="stylesheet" href="src/features/plate-verification/plate-verification.css">
+<link rel="stylesheet" href="src/features/verification-coverage/verification-coverage.css">
+<link rel="stylesheet" href="src/features/how-it-works/how-it-works.css">
+<link rel="stylesheet" href="src/features/pricing/pricing.css">
+<link rel="stylesheet" href="src/features/free-directory/free-directory.css">
+<link rel="stylesheet" href="src/features/testimonials/testimonials.css">
+<link rel="stylesheet" href="src/features/final-cta/final-cta.css">
+</head>
+<body>
+
+<!-- Cada seccion se carga desde su propio archivo de feature -->
+<div data-include="src/shared/components/topbar/topbar.html"></div>
+
+<main>
+  <div data-include="src/features/plate-verification/plate-verification.html"></div>
+  <div data-include="src/features/verification-coverage/verification-coverage.html"></div>
+  <div data-include="src/features/how-it-works/how-it-works.html"></div>
+  <div data-include="src/features/pricing/pricing.html"></div>
+  <div data-include="src/features/free-directory/free-directory.html"></div>
+  <div data-include="src/features/testimonials/testimonials.html"></div>
+  <div data-include="src/features/final-cta/final-cta.html"></div>
+</main>
+
+<div data-include="src/shared/components/footer/footer.html"></div>
+<div data-include="src/shared/components/whatsapp-fab/whatsapp-fab.html"></div>
+<div data-include="src/shared/components/whatsapp-advisor-modal/whatsapp-advisor-modal.html"></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
