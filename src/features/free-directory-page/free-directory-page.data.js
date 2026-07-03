@@ -13,7 +13,7 @@ export const CATEGORIES = [
       { name: 'SUNARP Consulta Vehicular', url: 'https://consultavehicular.sunarp.gob.pe/consulta-vehicular/inicio' },
       { name: 'SOAT', url: 'https://www.apeseg.org.pe/consultas-soat/' },
       { name: 'Revisión Técnica (CITV)', url: 'https://rec.mtc.gob.pe/Citv/ArConsultaCitv' },
-      { name: 'GNV — Deuda del taller', url: 'https://fise.minem.gob.pe:23308/consulta-taller/pages/consultaTaller/inicio' },
+      { name: 'SUTRAN — Papeletas', url: 'https://www.sutran.gob.pe/consultas/record-de-infracciones/record-de-infracciones/' },
     ],
   },
   {
@@ -24,8 +24,7 @@ export const CATEGORIES = [
       { name: 'SAT Lima', url: 'https://www.sat.gob.pe/VirtualSAT/principal.aspx' },
       { name: 'SAT Callao', url: 'https://pagopapeletascallao.pe/' },
       { name: 'ATU', url: 'https://sistemas.atu.gob.pe/consultavehiculo' },
-      { name: 'Fotopit (Velocidad)', url: 'http://www.pit.gob.pe/pit2007/EstadoCuentaVelocidad.aspx' },
-      { name: 'Sutran — Papeletas', url: 'https://www.sutran.gob.pe/consultas/record-de-infracciones/record-de-infracciones/' },
+      { name: 'Fotopit (Velocidad)', url: 'http://www.pit.gob.pe/pit2007/EstadoCuentaVelocidad.aspx' },     
     ],
   },
   {
@@ -49,12 +48,14 @@ export const CATEGORIES = [
     ],
   },
   {
-    id: 'otros-servicios',
-    title: 'Otros Servicios',
+    id: 'otras-consultas',
+    title: 'Otras Consultas',
     icon: 'otros',
     links: [
+      { name: 'GNV — Deuda Fise', url: 'https://fise.minem.gob.pe:23308/consulta-taller/pages/consultaTaller/inicio' },
       { name: 'Consulta de Lunas Polarizadas', url: 'https://sistemas.policia.gob.pe/consultalunas/' },
       { name: 'Tarjeta de Mercancía (MTC)', url: 'https://www.mtc.gob.pe/tramitesenlinea/tweb_tLinea/tw_consultadgtt/Frm_rep_intra_mercancia.aspx' },
+      { name: 'Tarjeta de Circulación de Pasajeros (MTC)', url: 'https://www.mtc.gob.pe/tramitesenlinea/tweb_tLinea/tw_consultadgtt/ntransporte_pasajeros.aspx' },
       { name: 'Requisitoria PNP', url: 'https://sistemas1.policia.gob.pe/ConsultaPVR/ConsultarServicio' },
       { name: 'Estado de Placa', url: 'https://www.placas.pe/#/home/verificarEstadoPlaca' },
     ],
